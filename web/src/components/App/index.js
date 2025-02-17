@@ -4,7 +4,7 @@ import { Container } from './styles';
 import GlobalStyles from '../../assets/styles/global';
 import defaultTheme from '../../assets/styles/themes/default';
 import Header from '../Header';
-import Routes from '../../Routes';
+import Routes from '../../routes';
 
 function App() {
   return (

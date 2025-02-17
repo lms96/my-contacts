@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Card, Container, Header, ListContainer, InputSearchContainer } from './styles';
 import arrow from '../../assets/images/icons/arrow.svg';
 import edit from '../../assets/images/icons/edit.svg';
@@ -12,7 +13,7 @@ export default function Home() {
 
       <Header>
         <strong>3 contatos</strong>
-        <a href="/">Novo contato</a>
+        <Link to="/new">Novo contato</Link>
       </Header>
 
       <ListContainer>
@@ -22,49 +23,28 @@ export default function Home() {
             <img src={arrow} alt="Arrow" />
           </button>
         </header>
-
-        <Card>
-          <div className="info">
-            <div className="contact-name">
-              <strong>Contato</strong>
-              <small>instagram</small>
-            </div>
-
-            <span>contato@mail.com</span>
-            <span>(84) 99999-9999</span>
-          </div>
-
-          <div className="actions">
-            <a href="/">
-              <img src={edit} alt="Edit" />
-            </a>
-            <button type="button">
-              <img src={trash} alt="Delete" />
-            </button>
-          </div>
-        </Card>
-
-        <Card>
-          <div className="info">
-            <div className="contact-name">
-              <strong>Contato</strong>
-              <small>instagram</small>
-            </div>
-
-            <span>contato@mail.com</span>
-            <span>(84) 99999-9999</span>
-          </div>
-
-          <div className="actions">
-            <a href="/">
-              <img src={edit} alt="Edit" />
-            </a>
-            <button type="button">
-              <img src={trash} alt="Delete" />
-            </button>
-          </div>
-        </Card>
       </ListContainer>
+
+      <Card>
+        <div className="info">
+          <div className="contact-name">
+            <strong>Contato</strong>
+            <small>instagram</small>
+          </div>
+
+          <span>contato@mail.com</span>
+          <span>(84) 99999-9999</span>
+        </div>
+
+        <div className="actions">
+          <Link to="/edit/123">
+            <img src={edit} alt="Edit" />
+          </Link>
+          <button type="button">
+            <img src={trash} alt="Delete" />
+          </button>
+        </div>
+      </Card>
     </Container>
   );
 }
