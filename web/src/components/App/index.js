@@ -4,7 +4,7 @@ import { Container } from './styles';
 import GlobalStyles from '../../assets/styles/global';
 import defaultTheme from '../../assets/styles/themes/default';
 import Header from '../Header';
-import Routes from '../../routes';
+import Router from '../../router';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <GlobalStyles />
         <Container>
           <Header />
-          <Routes />
+          <Router />
         </Container>
       </ThemeProvider>
     </BrowserRouter>
