@@ -1,14 +1,14 @@
 const express = require('express');
 const routes = require('./routes');
+const cors = require('./app/middlewares/cors');
+const errorHandler = require('./app/middlewares/errorHandler');
+
+require('dotenv').config();
 
 const app = express();
 app.use(express.json());
+app.use(cors);
 app.use(routes);
-// eslint-disable-next-line no-unused-vars
-app.use((error, request, response, next) => {
-  console.log('#### Error Handler');
-  console.log(error);
-  response.sendStatus(500);
-});
+app.use(errorHandler);
 
-app.listen(3000, () => console.log('Server started at port 3000!'));
+app.listen(3001, () => console.log('Server started at port 3001!'));
